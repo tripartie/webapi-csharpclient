@@ -1,0 +1,175 @@
+# TripartieWebAPI.CSharpClient.Api.TransactionTemplatesApi
+
+All URIs are relative to *https://platform.preprod.tripartie.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**ApiWebTransactionTemplatesGet**](TransactionTemplatesApi.md#apiwebtransactiontemplatesget) | **GET** /api/web/transaction-templates/ | Fetch
+[**ApiWebTransactionTemplatesPost**](TransactionTemplatesApi.md#apiwebtransactiontemplatespost) | **POST** /api/web/transaction-templates/ | Create
+
+
+
+## ApiWebTransactionTemplatesGet
+
+> ModelTransactionTemplate ApiWebTransactionTemplatesGet (string externalId = null, int? tripartieId = null)
+
+Fetch
+
+Fetch a Transaction template by its External ID or Tripartie ID.<br /> You MUST provide either <code>external-id</code> or <code>tripartie-id</code>, but not both. 
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using TripartieWebAPI.CSharpClient.Api;
+using TripartieWebAPI.CSharpClient.Client;
+using TripartieWebAPI.CSharpClient.Model;
+
+namespace Example
+{
+    public class ApiWebTransactionTemplatesGetExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://platform.preprod.tripartie.com";
+            // Configure API key authorization: ClientIdAuth
+            Configuration.Default.AddApiKey("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("client-id", "Bearer");
+
+            var apiInstance = new TransactionTemplatesApi(Configuration.Default);
+            var externalId = template-87;  // string | The Transaction template's External ID. (optional) 
+            var tripartieId = 24;  // int? | The Transaction template's Tripartie ID. (optional) 
+
+            try
+            {
+                // Fetch
+                ModelTransactionTemplate result = apiInstance.ApiWebTransactionTemplatesGet(externalId, tripartieId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling TransactionTemplatesApi.ApiWebTransactionTemplatesGet: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **externalId** | **string**| The Transaction template&#39;s External ID. | [optional] 
+ **tripartieId** | **int?**| The Transaction template&#39;s Tripartie ID. | [optional] 
+
+### Return type
+
+[**ModelTransactionTemplate**](ModelTransactionTemplate.md)
+
+### Authorization
+
+[ClientIdAuth](../README.md#ClientIdAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **404** | Not found |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ApiWebTransactionTemplatesPost
+
+> ModelTransactionTemplate ApiWebTransactionTemplatesPost (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+
+Create
+
+Create a Transaction template.<br /> You MUST provide either sellerExternalId or sellerTripartieId but not both 
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using TripartieWebAPI.CSharpClient.Api;
+using TripartieWebAPI.CSharpClient.Client;
+using TripartieWebAPI.CSharpClient.Model;
+
+namespace Example
+{
+    public class ApiWebTransactionTemplatesPostExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://platform.preprod.tripartie.com";
+            // Configure API key authorization: ClientIdAuth
+            Configuration.Default.AddApiKey("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("client-id", "Bearer");
+
+            var apiInstance = new TransactionTemplatesApi(Configuration.Default);
+            var requestCreateTransactionTemplate = new RequestCreateTransactionTemplate(); // RequestCreateTransactionTemplate | 
+
+            try
+            {
+                // Create
+                ModelTransactionTemplate result = apiInstance.ApiWebTransactionTemplatesPost(requestCreateTransactionTemplate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling TransactionTemplatesApi.ApiWebTransactionTemplatesPost: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestCreateTransactionTemplate** | [**RequestCreateTransactionTemplate**](RequestCreateTransactionTemplate.md)|  | 
+
+### Return type
+
+[**ModelTransactionTemplate**](ModelTransactionTemplate.md)
+
+### Authorization
+
+[ClientIdAuth](../README.md#ClientIdAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Success |  -  |
+| **400** | Bad request |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
