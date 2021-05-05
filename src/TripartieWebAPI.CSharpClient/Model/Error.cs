@@ -35,7 +35,7 @@ namespace TripartieWebAPI.CSharpClient.Model
         /// </summary>
         /// <param name="code">code.</param>
         /// <param name="errors">errors.</param>
-        public Error(int code = default(int), OneOfobjectstring errors = default(OneOfobjectstring))
+        public Error(int code = default(int), object errors = default(object))
         {
             this.Code = code;
             this.Errors = errors;
@@ -51,7 +51,7 @@ namespace TripartieWebAPI.CSharpClient.Model
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
-        public OneOfobjectstring Errors { get; set; }
+        public object Errors { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

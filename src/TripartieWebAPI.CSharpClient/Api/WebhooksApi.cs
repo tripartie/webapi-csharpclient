@@ -34,7 +34,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <returns>Webhook</returns>
-        Webhook ApiWebWebhooksGet (string uuid = default(string));
+        Webhook Validate (string uuid = default(string));
 
         /// <summary>
         /// Validate
@@ -45,28 +45,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <returns>ApiResponse of Webhook</returns>
-        ApiResponse<Webhook> ApiWebWebhooksGetWithHttpInfo (string uuid = default(string));
-        /// <summary>
-        /// Webhook
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <returns></returns>
-        void YourEndpointPost (Webhook webhook);
-
-        /// <summary>
-        /// Webhook
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> YourEndpointPostWithHttpInfo (Webhook webhook);
+        ApiResponse<Webhook> ValidateWithHttpInfo (string uuid = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -79,7 +58,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of Webhook</returns>
-        System.Threading.Tasks.Task<Webhook> ApiWebWebhooksGetAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<Webhook> ValidateAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Validate
@@ -91,30 +70,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (Webhook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Webhook>> ApiWebWebhooksGetWithHttpInfoAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Webhook
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task YourEndpointPostAsync (Webhook webhook, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Webhook
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> YourEndpointPostWithHttpInfoAsync (Webhook webhook, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Webhook>> ValidateWithHttpInfoAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -232,9 +188,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <returns>Webhook</returns>
-        public Webhook ApiWebWebhooksGet (string uuid = default(string))
+        public Webhook Validate (string uuid = default(string))
         {
-             ApiResponse<Webhook> localVarResponse = ApiWebWebhooksGetWithHttpInfo(uuid);
+             ApiResponse<Webhook> localVarResponse = ValidateWithHttpInfo(uuid);
              return localVarResponse.Data;
         }
 
@@ -244,7 +200,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <returns>ApiResponse of Webhook</returns>
-        public ApiResponse<Webhook> ApiWebWebhooksGetWithHttpInfo (string uuid = default(string))
+        public ApiResponse<Webhook> ValidateWithHttpInfo (string uuid = default(string))
         {
 
             var localVarPath = "/api/web/webhooks/";
@@ -285,7 +241,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebWebhooksGet", localVarResponse);
+                Exception exception = ExceptionFactory("Validate", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -301,9 +257,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of Webhook</returns>
-        public async System.Threading.Tasks.Task<Webhook> ApiWebWebhooksGetAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<Webhook> ValidateAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<Webhook> localVarResponse = await ApiWebWebhooksGetWithHttpInfoAsync(uuid, cancellationToken);
+             ApiResponse<Webhook> localVarResponse = await ValidateWithHttpInfoAsync(uuid, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -315,7 +271,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="uuid">The Webhook UUID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (Webhook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Webhook>> ApiWebWebhooksGetWithHttpInfoAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<Webhook>> ValidateWithHttpInfoAsync (string uuid = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/api/web/webhooks/";
@@ -356,170 +312,13 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebWebhooksGet", localVarResponse);
+                Exception exception = ExceptionFactory("Validate", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Webhook>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Webhook) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Webhook)));
-        }
-
-        /// <summary>
-        /// Webhook 
-        /// </summary>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <returns></returns>
-        public void YourEndpointPost (Webhook webhook)
-        {
-             YourEndpointPostWithHttpInfo(webhook);
-        }
-
-        /// <summary>
-        /// Webhook 
-        /// </summary>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> YourEndpointPostWithHttpInfo (Webhook webhook)
-        {
-            // verify the required parameter 'webhook' is set
-            if (webhook == null)
-                throw new ApiException(400, "Missing required parameter 'webhook' when calling WebhooksApi->YourEndpointPost");
-
-            var localVarPath = "/your-endpoint/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (webhook != null && webhook.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = webhook; // byte array
-            }
-
-            // authentication (ClientIdAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("client-id")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "client-id", this.Configuration.GetApiKeyWithPrefix("client-id")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("YourEndpointPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Webhook 
-        /// </summary>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task YourEndpointPostAsync (Webhook webhook, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             await YourEndpointPostWithHttpInfoAsync(webhook, cancellationToken);
-
-        }
-
-        /// <summary>
-        /// Webhook 
-        /// </summary>
-        /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="webhook"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> YourEndpointPostWithHttpInfoAsync (Webhook webhook, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'webhook' is set
-            if (webhook == null)
-                throw new ApiException(400, "Missing required parameter 'webhook' when calling WebhooksApi->YourEndpointPost");
-
-            var localVarPath = "/your-endpoint/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (webhook != null && webhook.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = webhook; // byte array
-            }
-
-            // authentication (ClientIdAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("client-id")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "client-id", this.Configuration.GetApiKeyWithPrefix("client-id")));
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("YourEndpointPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
         }
 
     }

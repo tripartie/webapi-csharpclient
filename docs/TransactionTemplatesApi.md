@@ -4,14 +4,14 @@ All URIs are relative to *https://platform.preprod.tripartie.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ApiWebTransactionTemplatesGet**](TransactionTemplatesApi.md#apiwebtransactiontemplatesget) | **GET** /api/web/transaction-templates/ | Fetch
-[**ApiWebTransactionTemplatesPost**](TransactionTemplatesApi.md#apiwebtransactiontemplatespost) | **POST** /api/web/transaction-templates/ | Create
+[**Fetch**](TransactionTemplatesApi.md#fetch) | **GET** /api/web/transaction-templates/ | Fetch
+[**Create**](TransactionTemplatesApi.md#create) | **POST** /api/web/transaction-templates/ | Create
 
 
 
-## ApiWebTransactionTemplatesGet
+## Fetch
 
-> ModelTransactionTemplate ApiWebTransactionTemplatesGet (string externalId = null, int? tripartieId = null)
+> ModelTransactionTemplate Fetch (string externalId = null, int? tripartieId = null)
 
 Fetch
 
@@ -28,7 +28,7 @@ using TripartieWebAPI.CSharpClient.Model;
 
 namespace Example
 {
-    public class ApiWebTransactionTemplatesGetExample
+    public class FetchExample
     {
         public static void Main()
         {
@@ -40,17 +40,16 @@ namespace Example
 
             var apiInstance = new TransactionTemplatesApi(Configuration.Default);
             var externalId = template-87;  // string | The Transaction template's External ID. (optional) 
-            var tripartieId = 24;  // int? | The Transaction template's Tripartie ID. (optional) 
 
             try
             {
                 // Fetch
-                ModelTransactionTemplate result = apiInstance.ApiWebTransactionTemplatesGet(externalId, tripartieId);
+                ModelTransactionTemplate result = apiInstance.Fetch(externalId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling TransactionTemplatesApi.ApiWebTransactionTemplatesGet: " + e.Message );
+                Debug.Print("Exception when calling TransactionTemplatesApi.Fetch: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -93,9 +92,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ApiWebTransactionTemplatesPost
+## Create
 
-> ModelTransactionTemplate ApiWebTransactionTemplatesPost (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+> ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
 
 Create
 
@@ -112,7 +111,7 @@ using TripartieWebAPI.CSharpClient.Model;
 
 namespace Example
 {
-    public class ApiWebTransactionTemplatesPostExample
+    public class CreateExample
     {
         public static void Main()
         {
@@ -128,12 +127,12 @@ namespace Example
             try
             {
                 // Create
-                ModelTransactionTemplate result = apiInstance.ApiWebTransactionTemplatesPost(requestCreateTransactionTemplate);
+                ModelTransactionTemplate result = apiInstance.Create(requestCreateTransactionTemplate);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling TransactionTemplatesApi.ApiWebTransactionTemplatesPost: " + e.Message );
+                Debug.Print("Exception when calling TransactionTemplatesApi.Create: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

@@ -64,40 +64,40 @@ namespace TripartieWebAPI.CSharpClient.Test
 
         
         /// <summary>
-        /// Test ApiWebUsersDelete
+        /// Test Unregister
         /// </summary>
         [Test]
-        public void ApiWebUsersDeleteTest()
+        public void UnregisterTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string externalId = null;
             //int? tripartieId = null;
-            //instance.ApiWebUsersDelete(externalId, tripartieId);
+            //instance.Unregister(externalId, tripartieId);
             
         }
         
         /// <summary>
-        /// Test ApiWebUsersGet
+        /// Test Fetch
         /// </summary>
         [Test]
-        public void ApiWebUsersGetTest()
+        public void FetchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string externalId = null;
             //int? tripartieId = null;
-            //var response = instance.ApiWebUsersGet(externalId, tripartieId);
+            //var response = instance.Fetch(externalId, tripartieId);
             //Assert.IsInstanceOf(typeof(ModelUser), response, "response is ModelUser");
         }
         
         /// <summary>
-        /// Test ApiWebUsersPost
+        /// Test Register
         /// </summary>
         [Test]
-        public void ApiWebUsersPostTest()
+        public void RegisterTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //RequestRegisterUser requestRegisterUser = null;
-            //var response = instance.ApiWebUsersPost(requestRegisterUser);
+            //var response = instance.Register(requestRegisterUser);
             //Assert.IsInstanceOf(typeof(ModelUser), response, "response is ModelUser");
         }
         

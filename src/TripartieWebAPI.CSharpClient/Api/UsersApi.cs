@@ -35,7 +35,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns></returns>
-        void ApiWebUsersDelete (string externalId = default(string), int? tripartieId = default(int?));
+        void Unregister (string externalId = default(string), int? tripartieId = default(int?));
 
         /// <summary>
         /// Unregister
@@ -47,7 +47,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ApiWebUsersDeleteWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
+        ApiResponse<Object> UnregisterWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
         /// <summary>
         /// Fetch
         /// </summary>
@@ -58,7 +58,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ModelUser</returns>
-        ModelUser ApiWebUsersGet (string externalId = default(string), int? tripartieId = default(int?));
+        ModelUser Fetch (string externalId = default(string), int? tripartieId = default(int?));
 
         /// <summary>
         /// Fetch
@@ -70,7 +70,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of ModelUser</returns>
-        ApiResponse<ModelUser> ApiWebUsersGetWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
+        ApiResponse<ModelUser> FetchWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
         /// <summary>
         /// Register
         /// </summary>
@@ -80,7 +80,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestRegisterUser"></param>
         /// <returns>ModelUser</returns>
-        ModelUser ApiWebUsersPost (RequestRegisterUser requestRegisterUser);
+        ModelUser Register (RequestRegisterUser requestRegisterUser);
 
         /// <summary>
         /// Register
@@ -91,7 +91,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestRegisterUser"></param>
         /// <returns>ApiResponse of ModelUser</returns>
-        ApiResponse<ModelUser> ApiWebUsersPostWithHttpInfo (RequestRegisterUser requestRegisterUser);
+        ApiResponse<ModelUser> RegisterWithHttpInfo (RequestRegisterUser requestRegisterUser);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -105,7 +105,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ApiWebUsersDeleteAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task UnregisterAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Unregister
@@ -118,7 +118,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ApiWebUsersDeleteWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnregisterWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Fetch
         /// </summary>
@@ -130,7 +130,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelUser</returns>
-        System.Threading.Tasks.Task<ModelUser> ApiWebUsersGetAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ModelUser> FetchAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Fetch
@@ -143,7 +143,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelUser)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelUser>> ApiWebUsersGetWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelUser>> FetchWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Register
         /// </summary>
@@ -154,7 +154,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestRegisterUser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelUser</returns>
-        System.Threading.Tasks.Task<ModelUser> ApiWebUsersPostAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ModelUser> RegisterAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Register
@@ -166,7 +166,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestRegisterUser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelUser)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelUser>> ApiWebUsersPostWithHttpInfoAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelUser>> RegisterWithHttpInfoAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -285,9 +285,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns></returns>
-        public void ApiWebUsersDelete (string externalId = default(string), int? tripartieId = default(int?))
+        public void Unregister (string externalId = default(string), int? tripartieId = default(int?))
         {
-             ApiWebUsersDeleteWithHttpInfo(externalId, tripartieId);
+             UnregisterWithHttpInfo(externalId, tripartieId);
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ApiWebUsersDeleteWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
+        public ApiResponse<Object> UnregisterWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
         {
 
             var localVarPath = "/api/web/users/";
@@ -339,7 +339,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersDelete", localVarResponse);
+                Exception exception = ExceptionFactory("Unregister", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -356,9 +356,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ApiWebUsersDeleteAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task UnregisterAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             await ApiWebUsersDeleteWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
+             await UnregisterWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
 
         }
 
@@ -370,7 +370,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ApiWebUsersDeleteWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnregisterWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/api/web/users/";
@@ -412,7 +412,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersDelete", localVarResponse);
+                Exception exception = ExceptionFactory("Unregister", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -428,9 +428,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ModelUser</returns>
-        public ModelUser ApiWebUsersGet (string externalId = default(string), int? tripartieId = default(int?))
+        public ModelUser Fetch (string externalId = default(string), int? tripartieId = default(int?))
         {
-             ApiResponse<ModelUser> localVarResponse = ApiWebUsersGetWithHttpInfo(externalId, tripartieId);
+             ApiResponse<ModelUser> localVarResponse = FetchWithHttpInfo(externalId, tripartieId);
              return localVarResponse.Data;
         }
 
@@ -441,7 +441,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The User&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of ModelUser</returns>
-        public ApiResponse<ModelUser> ApiWebUsersGetWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
+        public ApiResponse<ModelUser> FetchWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
         {
 
             var localVarPath = "/api/web/users/";
@@ -483,7 +483,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersGet", localVarResponse);
+                Exception exception = ExceptionFactory("Fetch", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -500,9 +500,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelUser</returns>
-        public async System.Threading.Tasks.Task<ModelUser> ApiWebUsersGetAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ModelUser> FetchAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ModelUser> localVarResponse = await ApiWebUsersGetWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
+             ApiResponse<ModelUser> localVarResponse = await FetchWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -515,7 +515,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The User&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelUser)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelUser>> ApiWebUsersGetWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ModelUser>> FetchWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/api/web/users/";
@@ -557,7 +557,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersGet", localVarResponse);
+                Exception exception = ExceptionFactory("Fetch", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -572,9 +572,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestRegisterUser"></param>
         /// <returns>ModelUser</returns>
-        public ModelUser ApiWebUsersPost (RequestRegisterUser requestRegisterUser)
+        public ModelUser Register (RequestRegisterUser requestRegisterUser)
         {
-             ApiResponse<ModelUser> localVarResponse = ApiWebUsersPostWithHttpInfo(requestRegisterUser);
+             ApiResponse<ModelUser> localVarResponse = RegisterWithHttpInfo(requestRegisterUser);
              return localVarResponse.Data;
         }
 
@@ -584,11 +584,11 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestRegisterUser"></param>
         /// <returns>ApiResponse of ModelUser</returns>
-        public ApiResponse<ModelUser> ApiWebUsersPostWithHttpInfo (RequestRegisterUser requestRegisterUser)
+        public ApiResponse<ModelUser> RegisterWithHttpInfo (RequestRegisterUser requestRegisterUser)
         {
             // verify the required parameter 'requestRegisterUser' is set
             if (requestRegisterUser == null)
-                throw new ApiException(400, "Missing required parameter 'requestRegisterUser' when calling UsersApi->ApiWebUsersPost");
+                throw new ApiException(400, "Missing required parameter 'requestRegisterUser' when calling UsersApi->Register");
 
             var localVarPath = "/api/web/users/";
             var localVarPathParams = new Dictionary<String, String>();
@@ -636,7 +636,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersPost", localVarResponse);
+                Exception exception = ExceptionFactory("Register", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -652,9 +652,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestRegisterUser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelUser</returns>
-        public async System.Threading.Tasks.Task<ModelUser> ApiWebUsersPostAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ModelUser> RegisterAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ModelUser> localVarResponse = await ApiWebUsersPostWithHttpInfoAsync(requestRegisterUser, cancellationToken);
+             ApiResponse<ModelUser> localVarResponse = await RegisterWithHttpInfoAsync(requestRegisterUser, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -666,11 +666,11 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestRegisterUser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelUser)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelUser>> ApiWebUsersPostWithHttpInfoAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ModelUser>> RegisterWithHttpInfoAsync (RequestRegisterUser requestRegisterUser, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'requestRegisterUser' is set
             if (requestRegisterUser == null)
-                throw new ApiException(400, "Missing required parameter 'requestRegisterUser' when calling UsersApi->ApiWebUsersPost");
+                throw new ApiException(400, "Missing required parameter 'requestRegisterUser' when calling UsersApi->Register");
 
             var localVarPath = "/api/web/users/";
             var localVarPathParams = new Dictionary<String, String>();
@@ -718,7 +718,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebUsersPost", localVarResponse);
+                Exception exception = ExceptionFactory("Register", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -4,14 +4,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OpenAPI Library")]
-[assembly: AssemblyDescription("A library generated from a OpenAPI doc")]
+[assembly: AssemblyTitle("TripartieWebAPI - CSharpClient")]
+[assembly: AssemblyDescription("The Tripartie Web API allows you to easily create Transaction templates")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OpenAPI")]
-[assembly: AssemblyProduct("OpenAPILibrary")]
-[assembly: AssemblyCopyright("No Copyright")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCompany("Tripartie")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

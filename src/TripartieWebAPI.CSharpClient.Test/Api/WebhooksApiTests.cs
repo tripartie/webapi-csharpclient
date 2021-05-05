@@ -64,27 +64,15 @@ namespace TripartieWebAPI.CSharpClient.Test
 
         
         /// <summary>
-        /// Test ApiWebWebhooksGet
+        /// Test Validate
         /// </summary>
         [Test]
-        public void ApiWebWebhooksGetTest()
+        public void ValidateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string uuid = null;
-            //var response = instance.ApiWebWebhooksGet(uuid);
+            //var response = instance.Validate(uuid);
             //Assert.IsInstanceOf(typeof(Webhook), response, "response is Webhook");
-        }
-        
-        /// <summary>
-        /// Test YourEndpointPost
-        /// </summary>
-        [Test]
-        public void YourEndpointPostTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Webhook webhook = null;
-            //instance.YourEndpointPost(webhook);
-            
         }
         
     }

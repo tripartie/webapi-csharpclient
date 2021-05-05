@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.0.0
-MinimumVisualStudioVersion = 10.0.0.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripartieWebAPI.CSharpClient", "src\TripartieWebAPI.CSharpClient\TripartieWebAPI.CSharpClient.csproj", "{2A4A2BE4-1AE1-46B6-B140-2D33BC303BD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripartieWebAPI.CSharpClient.Test", "src\TripartieWebAPI.CSharpClient.Test\TripartieWebAPI.CSharpClient.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53573A3D-9CA4-4033-B991-9C4305FB065C}
 	EndGlobalSection
 EndGlobal

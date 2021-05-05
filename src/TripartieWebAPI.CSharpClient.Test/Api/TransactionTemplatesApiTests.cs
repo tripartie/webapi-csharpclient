@@ -64,27 +64,27 @@ namespace TripartieWebAPI.CSharpClient.Test
 
         
         /// <summary>
-        /// Test ApiWebTransactionTemplatesGet
+        /// Test Fetch
         /// </summary>
         [Test]
-        public void ApiWebTransactionTemplatesGetTest()
+        public void FetchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string externalId = null;
             //int? tripartieId = null;
-            //var response = instance.ApiWebTransactionTemplatesGet(externalId, tripartieId);
+            //var response = instance.Fetch(externalId, tripartieId);
             //Assert.IsInstanceOf(typeof(ModelTransactionTemplate), response, "response is ModelTransactionTemplate");
         }
         
         /// <summary>
-        /// Test ApiWebTransactionTemplatesPost
+        /// Test Create
         /// </summary>
         [Test]
-        public void ApiWebTransactionTemplatesPostTest()
+        public void CreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //RequestCreateTransactionTemplate requestCreateTransactionTemplate = null;
-            //var response = instance.ApiWebTransactionTemplatesPost(requestCreateTransactionTemplate);
+            //var response = instance.Create(requestCreateTransactionTemplate);
             //Assert.IsInstanceOf(typeof(ModelTransactionTemplate), response, "response is ModelTransactionTemplate");
         }
         

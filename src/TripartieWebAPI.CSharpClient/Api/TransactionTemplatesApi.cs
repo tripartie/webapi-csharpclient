@@ -35,7 +35,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The Transaction template&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <returns>ModelTransactionTemplate</returns>
-        ModelTransactionTemplate ApiWebTransactionTemplatesGet (string externalId = default(string), int? tripartieId = default(int?));
+        ModelTransactionTemplate Fetch (string externalId = default(string), int? tripartieId = default(int?));
 
         /// <summary>
         /// Fetch
@@ -47,7 +47,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The Transaction template&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        ApiResponse<ModelTransactionTemplate> ApiWebTransactionTemplatesGetWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
+        ApiResponse<ModelTransactionTemplate> FetchWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?));
         /// <summary>
         /// Create
         /// </summary>
@@ -57,7 +57,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <returns>ModelTransactionTemplate</returns>
-        ModelTransactionTemplate ApiWebTransactionTemplatesPost (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
+        ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
 
         /// <summary>
         /// Create
@@ -68,7 +68,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        ApiResponse<ModelTransactionTemplate> ApiWebTransactionTemplatesPostWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
+        ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -82,7 +82,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        System.Threading.Tasks.Task<ModelTransactionTemplate> ApiWebTransactionTemplatesGetAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ModelTransactionTemplate> FetchAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Fetch
@@ -95,7 +95,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> ApiWebTransactionTemplatesGetWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> FetchWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Create
         /// </summary>
@@ -106,7 +106,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        System.Threading.Tasks.Task<ModelTransactionTemplate> ApiWebTransactionTemplatesPostAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create
@@ -118,7 +118,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> ApiWebTransactionTemplatesPostWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -237,9 +237,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The Transaction template&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <returns>ModelTransactionTemplate</returns>
-        public ModelTransactionTemplate ApiWebTransactionTemplatesGet (string externalId = default(string), int? tripartieId = default(int?))
+        public ModelTransactionTemplate Fetch (string externalId = default(string), int? tripartieId = default(int?))
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = ApiWebTransactionTemplatesGetWithHttpInfo(externalId, tripartieId);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = FetchWithHttpInfo(externalId, tripartieId);
              return localVarResponse.Data;
         }
 
@@ -250,7 +250,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="externalId">The Transaction template&#39;s External ID. (optional)</param>
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        public ApiResponse<ModelTransactionTemplate> ApiWebTransactionTemplatesGetWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
+        public ApiResponse<ModelTransactionTemplate> FetchWithHttpInfo (string externalId = default(string), int? tripartieId = default(int?))
         {
 
             var localVarPath = "/api/web/transaction-templates/";
@@ -292,7 +292,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebTransactionTemplatesGet", localVarResponse);
+                Exception exception = ExceptionFactory("Fetch", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -309,9 +309,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        public async System.Threading.Tasks.Task<ModelTransactionTemplate> ApiWebTransactionTemplatesGetAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ModelTransactionTemplate> FetchAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = await ApiWebTransactionTemplatesGetWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = await FetchWithHttpInfoAsync(externalId, tripartieId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -324,7 +324,7 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="tripartieId">The Transaction template&#39;s Tripartie ID. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> ApiWebTransactionTemplatesGetWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> FetchWithHttpInfoAsync (string externalId = default(string), int? tripartieId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/api/web/transaction-templates/";
@@ -366,7 +366,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebTransactionTemplatesGet", localVarResponse);
+                Exception exception = ExceptionFactory("Fetch", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -381,9 +381,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <returns>ModelTransactionTemplate</returns>
-        public ModelTransactionTemplate ApiWebTransactionTemplatesPost (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+        public ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = ApiWebTransactionTemplatesPostWithHttpInfo(requestCreateTransactionTemplate);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = CreateWithHttpInfo(requestCreateTransactionTemplate);
              return localVarResponse.Data;
         }
 
@@ -393,11 +393,11 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        public ApiResponse<ModelTransactionTemplate> ApiWebTransactionTemplatesPostWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+        public ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
         {
             // verify the required parameter 'requestCreateTransactionTemplate' is set
             if (requestCreateTransactionTemplate == null)
-                throw new ApiException(400, "Missing required parameter 'requestCreateTransactionTemplate' when calling TransactionTemplatesApi->ApiWebTransactionTemplatesPost");
+                throw new ApiException(400, "Missing required parameter 'requestCreateTransactionTemplate' when calling TransactionTemplatesApi->Create");
 
             var localVarPath = "/api/web/transaction-templates/";
             var localVarPathParams = new Dictionary<String, String>();
@@ -445,7 +445,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebTransactionTemplatesPost", localVarResponse);
+                Exception exception = ExceptionFactory("Create", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -461,9 +461,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        public async System.Threading.Tasks.Task<ModelTransactionTemplate> ApiWebTransactionTemplatesPostAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = await ApiWebTransactionTemplatesPostWithHttpInfoAsync(requestCreateTransactionTemplate, cancellationToken);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = await CreateWithHttpInfoAsync(requestCreateTransactionTemplate, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -475,11 +475,11 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// <param name="requestCreateTransactionTemplate"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> ApiWebTransactionTemplatesPostWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'requestCreateTransactionTemplate' is set
             if (requestCreateTransactionTemplate == null)
-                throw new ApiException(400, "Missing required parameter 'requestCreateTransactionTemplate' when calling TransactionTemplatesApi->ApiWebTransactionTemplatesPost");
+                throw new ApiException(400, "Missing required parameter 'requestCreateTransactionTemplate' when calling TransactionTemplatesApi->Create");
 
             var localVarPath = "/api/web/transaction-templates/";
             var localVarPathParams = new Dictionary<String, String>();
@@ -527,7 +527,7 @@ namespace TripartieWebAPI.CSharpClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ApiWebTransactionTemplatesPost", localVarResponse);
+                Exception exception = ExceptionFactory("Create", localVarResponse);
                 if (exception != null) throw exception;
             }
 

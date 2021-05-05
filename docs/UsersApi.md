@@ -4,15 +4,15 @@ All URIs are relative to *https://platform.preprod.tripartie.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ApiWebUsersDelete**](UsersApi.md#apiwebusersdelete) | **DELETE** /api/web/users/ | Unregister
-[**ApiWebUsersGet**](UsersApi.md#apiwebusersget) | **GET** /api/web/users/ | Fetch
-[**ApiWebUsersPost**](UsersApi.md#apiwebuserspost) | **POST** /api/web/users/ | Register
+[**Unregister**](UsersApi.md#unregister) | **DELETE** /api/web/users/ | Unregister
+[**Fetch**](UsersApi.md#fetch) | **GET** /api/web/users/ | Fetch
+[**Register**](UsersApi.md#register) | **POST** /api/web/users/ | Register
 
 
 
-## ApiWebUsersDelete
+## Unregister
 
-> void ApiWebUsersDelete (string externalId = null, int? tripartieId = null)
+> void Unregister (string externalId = null, int? tripartieId = null)
 
 Unregister
 
@@ -29,7 +29,7 @@ using TripartieWebAPI.CSharpClient.Model;
 
 namespace Example
 {
-    public class ApiWebUsersDeleteExample
+    public class UnregisterExample
     {
         public static void Main()
         {
@@ -41,16 +41,15 @@ namespace Example
 
             var apiInstance = new UsersApi(Configuration.Default);
             var externalId = user-96;  // string | The User's External ID. (optional) 
-            var tripartieId = 5;  // int? | The User's Tripartie ID. (optional) 
 
             try
             {
                 // Unregister
-                apiInstance.ApiWebUsersDelete(externalId, tripartieId);
+                apiInstance.Unregister(externalId);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UsersApi.ApiWebUsersDelete: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.Unregister: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -93,9 +92,9 @@ void (empty response body)
 [[Back to README]](../README.md)
 
 
-## ApiWebUsersGet
+## Fetch
 
-> ModelUser ApiWebUsersGet (string externalId = null, int? tripartieId = null)
+> ModelUser Fetch (string externalId = null, int? tripartieId = null)
 
 Fetch
 
@@ -112,7 +111,7 @@ using TripartieWebAPI.CSharpClient.Model;
 
 namespace Example
 {
-    public class ApiWebUsersGetExample
+    public class FetchExample
     {
         public static void Main()
         {
@@ -124,17 +123,16 @@ namespace Example
 
             var apiInstance = new UsersApi(Configuration.Default);
             var externalId = user-96;  // string | The User's External ID. (optional) 
-            var tripartieId = 5;  // int? | The User's Tripartie ID. (optional) 
 
             try
             {
                 // Fetch
-                ModelUser result = apiInstance.ApiWebUsersGet(externalId, tripartieId);
+                ModelUser result = apiInstance.Fetch(externalId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UsersApi.ApiWebUsersGet: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.Fetch: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -177,9 +175,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ApiWebUsersPost
+## Register
 
-> ModelUser ApiWebUsersPost (RequestRegisterUser requestRegisterUser)
+> ModelUser Register (RequestRegisterUser requestRegisterUser)
 
 Register
 
@@ -194,7 +192,7 @@ using TripartieWebAPI.CSharpClient.Model;
 
 namespace Example
 {
-    public class ApiWebUsersPostExample
+    public class RegisterExample
     {
         public static void Main()
         {
@@ -210,12 +208,12 @@ namespace Example
             try
             {
                 // Register
-                ModelUser result = apiInstance.ApiWebUsersPost(requestRegisterUser);
+                ModelUser result = apiInstance.Register(requestRegisterUser);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UsersApi.ApiWebUsersPost: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.Register: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
