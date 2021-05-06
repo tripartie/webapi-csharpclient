@@ -15,3 +15,4 @@ copy packages\JsonSubTypes.1.6.0\lib\net45\JsonSubTypes.dll bin\JsonSubTypes.dll
 copy packages\RestSharp.105.1.0\lib\net45\RestSharp.dll bin\RestSharp.dll
 %CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\JsonSubTypes.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll  /target:library /out:bin\TripartieWebAPI.CSharpClient.dll /recurse:src\TripartieWebAPI.CSharpClient\*.cs /doc:bin\TripartieWebAPI.CSharpClient.xml
 
+.\nuget.exe pack -Build src\TripartieWebAPI.CSharpClient\TripartieWebAPI.CSharpClient.csproj

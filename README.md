@@ -37,32 +37,27 @@ NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploa
 
 ## Installation
 
-Run the following command to generate the DLL
+To use this package in your project, you must first create a GitHub Personal Access Token with at least the scope *read:packages*: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 
-- [Mac/Linux] `/bin/sh build.sh`
-- [Windows] `build.bat`
-
-Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
-
-```csharp
-using TripartieWebAPI.CSharpClient.Api;
-using TripartieWebAPI.CSharpClient.Client;
-using TripartieWebAPI.CSharpClient.Model;
+You can then use this token to authenticate with the NuGet source:
 
 ```
-
-
-## Packaging
-
-A `.nuspec` is included with the project. You can follow the Nuget quickstart to [create](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#create-the-package) and [publish](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#publish-the-package) packages.
-
-This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
-
-```
-nuget pack -Build -OutputDirectory out TripartieWebAPI.CSharpClient.csproj
+NuGet source: https://nuget.pkg.github.com/tripartie/index.json
+Username: <YOUR GITHUB USERNAME>
+Password: <YOUR PERSONAL ACCESS TOKEN>
 ```
 
-Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
+:point_up: You can test this by navigating to https://nuget.pkg.github.com/tripartie/index.json
+
+You need to add this source in Visual Studio: 
+
+Once this is done, you can add the package to your project: `Tools > NuGet Package Manager > Package Manager Settings`, then go to tab `Package Sources`, and add a new Package Source.
+
+Finally, you can install the NuGet package using:
+
+```
+Install-Package TripartieWebAPI.CSharpClient
+```
 
 
 ## Getting Started
