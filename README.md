@@ -53,11 +53,13 @@ You need to add this source in Visual Studio:
 
 Once this is done, you can add the package to your project: `Tools > NuGet Package Manager > Package Manager Settings`, then go to tab `Package Sources`, and add a new Package Source.
 
-Finally, you can install the NuGet package using:
+Finally, you can install the NuGet package within the 'Package Manager Console' using:
 
 ```
 Install-Package TripartieWebAPI.CSharpClient
 ```
+
+If prompt, use your user name and the generated token from GitHub.
 
 
 ## Getting Started
