@@ -1,0 +1,21 @@
+<Project>
+
+  <PropertyGroup>
+
+    <Title>TripartieWebAPI - CSharpClient</Title>
+    <Id>TripartieWebAPI.CSharpClient</Id>
+
+    <!-- The package version number that is used when resolving dependencies -->
+    <Version>0.1.0</Version>
+
+    <!-- Authors contain text that appears directly on the gallery -->
+    <Authors>Tripartie</Authors>
+    <Company>$(Authors)</Company>
+
+    <!-- The description can be used in package manager UI. Note that the
+         nuget.org gallery uses information you add in the portal. -->
+    <Description>C# Client for Tripartie Web API, the Tripartie Web API allows you to easily create Transaction templates.</Description>
+
+  </PropertyGroup>
+
+</Project>

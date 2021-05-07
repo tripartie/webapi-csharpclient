@@ -1,0 +1,1 @@
+﻿dotnet pack 'src/TripartieWebAPI.CSharpClient/TripartieWebAPI.CSharpClient.csproj' --output 'src/bin/packages/' --configuration Release --include-symbols -p:SymbolPackageFormat=symbols.nupkg -p:FileVersion=1.0.0 -p:Version=1.0.0 -p:AssemblyVersion=1.0.0
