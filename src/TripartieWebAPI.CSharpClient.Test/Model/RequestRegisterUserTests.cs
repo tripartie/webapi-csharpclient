@@ -89,6 +89,14 @@ namespace TripartieWebAPI.CSharpClient.Test
         {
             // TODO unit test for the property 'DisplayName'
         }
+        /// <summary>
+        /// Test the property 'Lang'
+        /// </summary>
+        [Test]
+        public void LangTest()
+        {
+            // TODO unit test for the property 'Lang'
+        }
 
     }
 

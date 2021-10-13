@@ -41,7 +41,8 @@ namespace TripartieWebAPI.CSharpClient.Model
         /// <param name="email">The user&#39;s email. (required).</param>
         /// <param name="externalId">The user&#39;s External ID..</param>
         /// <param name="displayName">The user&#39;s display name..</param>
-        public RequestRegisterUser(string email = default(string), string externalId = default(string), string displayName = default(string))
+        /// <param name="lang">The user&#39;s language..</param>
+        public RequestRegisterUser(string email = default(string), string externalId = default(string), string displayName = default(string), string lang = default(string))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -55,6 +56,7 @@ namespace TripartieWebAPI.CSharpClient.Model
             
             this.ExternalId = externalId;
             this.DisplayName = displayName;
+            this.Lang = lang;
         }
         
         /// <summary>
@@ -79,6 +81,13 @@ namespace TripartieWebAPI.CSharpClient.Model
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// The user&#39;s language.
+        /// </summary>
+        /// <value>The user&#39;s language.</value>
+        [DataMember(Name="lang", EmitDefaultValue=false)]
+        public string Lang { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -89,6 +98,7 @@ namespace TripartieWebAPI.CSharpClient.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Lang: ").Append(Lang).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,6 +147,11 @@ namespace TripartieWebAPI.CSharpClient.Model
                     this.DisplayName == input.DisplayName ||
                     (this.DisplayName != null &&
                     this.DisplayName.Equals(input.DisplayName))
+                ) && 
+                (
+                    this.Lang == input.Lang ||
+                    (this.Lang != null &&
+                    this.Lang.Equals(input.Lang))
                 );
         }
 
@@ -155,6 +170,8 @@ namespace TripartieWebAPI.CSharpClient.Model
                     hashCode = hashCode * 59 + this.ExternalId.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                if (this.Lang != null)
+                    hashCode = hashCode * 59 + this.Lang.GetHashCode();
                 return hashCode;
             }
         }

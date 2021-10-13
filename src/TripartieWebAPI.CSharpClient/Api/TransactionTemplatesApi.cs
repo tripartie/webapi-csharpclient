@@ -56,8 +56,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </remarks>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <returns>ModelTransactionTemplate</returns>
-        ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
+        ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false);
 
         /// <summary>
         /// Create
@@ -67,8 +68,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </remarks>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate);
+        ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -104,9 +106,10 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </remarks>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create
@@ -116,9 +119,10 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </remarks>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -380,10 +384,11 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </summary>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <returns>ModelTransactionTemplate</returns>
-        public ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+        public ModelTransactionTemplate Create (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false)
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = CreateWithHttpInfo(requestCreateTransactionTemplate);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = CreateWithHttpInfo(requestCreateTransactionTemplate, dryRun);
              return localVarResponse.Data;
         }
 
@@ -392,8 +397,9 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </summary>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <returns>ApiResponse of ModelTransactionTemplate</returns>
-        public ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate)
+        public ApiResponse<ModelTransactionTemplate> CreateWithHttpInfo (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false)
         {
             // verify the required parameter 'requestCreateTransactionTemplate' is set
             if (requestCreateTransactionTemplate == null)
@@ -429,6 +435,8 @@ namespace TripartieWebAPI.CSharpClient.Api
             {
                 localVarPostBody = requestCreateTransactionTemplate; // byte array
             }
+            
+            if (dryRun == true) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dry-run", 1)); // query parameter
 
             // authentication (ClientIdAuth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("client-id")))
@@ -459,11 +467,12 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </summary>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ModelTransactionTemplate</returns>
-        public async System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ModelTransactionTemplate> CreateAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ModelTransactionTemplate> localVarResponse = await CreateWithHttpInfoAsync(requestCreateTransactionTemplate, cancellationToken);
+             ApiResponse<ModelTransactionTemplate> localVarResponse = await CreateWithHttpInfoAsync(requestCreateTransactionTemplate, dryRun, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -473,9 +482,10 @@ namespace TripartieWebAPI.CSharpClient.Api
         /// </summary>
         /// <exception cref="TripartieWebAPI.CSharpClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestCreateTransactionTemplate"></param>
+        /// <param name="dryRun">Do a dry-run? (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ModelTransactionTemplate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ModelTransactionTemplate>> CreateWithHttpInfoAsync (RequestCreateTransactionTemplate requestCreateTransactionTemplate, bool dryRun = false, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'requestCreateTransactionTemplate' is set
             if (requestCreateTransactionTemplate == null)
@@ -511,6 +521,8 @@ namespace TripartieWebAPI.CSharpClient.Api
             {
                 localVarPostBody = requestCreateTransactionTemplate; // byte array
             }
+            
+            if (dryRun == true) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dry-run", 1)); // query parameter
 
             // authentication (ClientIdAuth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("client-id")))

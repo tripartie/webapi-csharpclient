@@ -147,6 +147,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestCreateTransactionTemplate** | [**RequestCreateTransactionTemplate**](RequestCreateTransactionTemplate.md)|  | 
+ **dryRun** | **bool** | Do a dry-run? | [optional] |
 
 ### Return type
 
